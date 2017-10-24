@@ -25,7 +25,7 @@ public class NewCustomerTest extends NewCustomerPage
 		Reporter.log("Add New Customer Page is Launched Successfully");
 	}
 	
-	@Test(priority=2,description="Verification of Add New Customer Submit Button")
+	@Test(priority=2,enabled = true,description="Verification of Add New Customer Submit Button")
 	public static void verifyNewCustomerSubmitButton() throws InterruptedException
 	{
 		NewCustomerPage.launchCreateNewCustomer();
@@ -34,7 +34,7 @@ public class NewCustomerTest extends NewCustomerPage
 		Reporter.log("As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer");
 		fillNewCustInfo("try2List", "female", "01/08/1990", "address", "cityList",
 				"stateList", "123465", "456789123", "emailList2tse@test.com" ,"pwdList");
-		
+		Thread.sleep(2000);
 		submitNewCustInfo();
 		Thread.sleep(2000);
 		Assert.assertTrue(getNewCustDashBoardMsg().equals("Customer Registered Successfully!!!"));
@@ -45,7 +45,7 @@ public class NewCustomerTest extends NewCustomerPage
 	
 	
 	
-	@Test(priority=3,description="Verification Of Submitting Multiple Valid Data",enabled=true,dependsOnMethods = {"verifyNewCustomerPageLaunch"} )
+	@Test(priority=3,description="Verification Of Submitting Multiple Valid Data",enabled=false,dependsOnMethods = {"verifyNewCustomerPageLaunch"} )
 	public static void addMultiValidCustomers() throws IOException, InterruptedException
 	{
 		NewCustomerPage.launchCreateNewCustomer();
