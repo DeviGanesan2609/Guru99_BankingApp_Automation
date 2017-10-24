@@ -33,8 +33,8 @@ public class NewCustomerTest extends NewCustomerPage
 		submitNewCustInfo();
 		Assert.assertTrue(acceptAlert().equals("please fill all fields"));
 		Reporter.log("As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer");
-		fillNewCustInfo("try2List", "female", "01/08/1990", "address", "cityList",
-				"stateList", "123465", "456789123", "emailList2tse@test.com" ,"pwdList");
+		fillNewCustInfo("ChangeList", "female", "01/08/1990", "address", "cityList",
+				"stateList", "123465", "456789123", "chanemail2tse@test.com" ,"Changedpwst");
 		Thread.sleep(2000);
 		submitNewCustInfo();
 		Thread.sleep(2000);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
     <line>
       <![CDATA[Add New Customer Page is Launched Successfully]]>
@@ -7,91 +7,37 @@
     <line>
       <![CDATA[As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer]]>
     </line>
+    <line>
+      <![CDATA[As Expected,New Customer information is Added Successfully]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46522" started-at="2017-10-24T09:16:32Z" finished-at="2017-10-24T09:17:19Z">
+  <suite name="Default suite" duration-ms="51406" started-at="2017-10-24T10:19:02Z" finished-at="2017-10-24T10:19:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46522" started-at="2017-10-24T09:16:32Z" finished-at="2017-10-24T09:17:19Z">
+    <test name="Default test" duration-ms="51406" started-at="2017-10-24T10:19:02Z" finished-at="2017-10-24T10:19:54Z">
       <class name="tests.NewCustomerTest">
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="setUpBrowser" is-config="true" duration-ms="14337" started-at="2017-10-24T14:46:32Z" finished-at="2017-10-24T14:46:47Z">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="setUpBrowser" is-config="true" duration-ms="11123" started-at="2017-10-24T15:49:02Z" finished-at="2017-10-24T15:49:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="verifyNewCustomerPageLaunch()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerPageLaunch" duration-ms="3359" started-at="2017-10-24T14:46:47Z" description="Verification Of Launching Add New Customer page" finished-at="2017-10-24T14:46:50Z">
+        <test-method status="PASS" signature="verifyNewCustomerPageLaunch()[pri:1, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerPageLaunch" duration-ms="2870" started-at="2017-10-24T15:49:14Z" description="Verification Of Launching Add New Customer page" finished-at="2017-10-24T15:49:16Z">
           <reporter-output>
             <line>
               <![CDATA[Add New Customer Page is Launched Successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyNewCustomerPageLaunch -->
-        <test-method status="FAIL" signature="verifyNewCustomerSubmitButton()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerSubmitButton" duration-ms="27703" started-at="2017-10-24T14:46:50Z" description="Verification of Add New Customer Submit Button" finished-at="2017-10-24T14:47:18Z">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
-            <message>
-              <![CDATA[: 
-Build info: version: '3.5.0', revision: '8def36e068', time: '2017-08-10T23:00:22.093Z'
-System info: host: 'HIBAIP22088', ip: '10.91.93.146', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=C:\Users\indganesan\AppData\Local\Temp\rust_mozprofile.dBbFzjZzZaU2, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0.1, platformVersion=6.1, moz:processID=8456.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
-Session ID: 0cbd0657-ff6f-45d1-ab8c-21e64880fd8c
-*** Element info: {Using=class name, value=heading3}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: : 
-Build info: version: '3.5.0', revision: '8def36e068', time: '2017-08-10T23:00:22.093Z'
-System info: host: 'HIBAIP22088', ip: '10.91.93.146', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=C:\Users\indganesan\AppData\Local\Temp\rust_mozprofile.dBbFzjZzZaU2, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0.1, platformVersion=6.1, moz:processID=8456.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
-Session ID: 0cbd0657-ff6f-45d1-ab8c-21e64880fd8c
-*** Element info: {Using=class name, value=heading3}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:118)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:414)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:497)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:406)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at pages.NewCustomerPage.getNewCustDashBoardMsg(NewCustomerPage.java:63)
-	at tests.NewCustomerTest.verifyNewCustomerSubmitButton(NewCustomerTest.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:776)
-	at org.testng.TestRunner.run(TestRunner.java:634)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
-	at org.testng.TestNG.runSuites(TestNG.java:1161)
-	at org.testng.TestNG.run(TestNG.java:1129)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+        <test-method status="PASS" signature="verifyNewCustomerSubmitButton()[pri:2, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerSubmitButton" duration-ms="36173" started-at="2017-10-24T15:49:17Z" description="Verification of Add New Customer Submit Button" finished-at="2017-10-24T15:49:53Z">
           <reporter-output>
             <line>
               <![CDATA[As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer]]>
             </line>
+            <line>
+              <![CDATA[As Expected,New Customer information is Added Successfully]]>
+            </line>
           </reporter-output>
         </test-method> <!-- verifyNewCustomerSubmitButton -->
-        <test-method status="PASS" signature="closeBroser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="closeBroser" is-config="true" duration-ms="1089" started-at="2017-10-24T14:47:18Z" finished-at="2017-10-24T14:47:19Z">
+        <test-method status="PASS" signature="closeBroser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="closeBroser" is-config="true" duration-ms="1206" started-at="2017-10-24T15:49:53Z" finished-at="2017-10-24T15:49:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBroser -->

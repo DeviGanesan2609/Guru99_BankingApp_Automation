@@ -95,9 +95,10 @@ public class NewCustomerPage extends BaseFile
 	Thread.sleep(2000);
 	}
 	
-	public static void submitNewCustInfo()
+	public static void submitNewCustInfo() throws InterruptedException
 	{
 		newCustSubmitBtn.click();
+		Thread.sleep(2000);
 	}
 	
 	
