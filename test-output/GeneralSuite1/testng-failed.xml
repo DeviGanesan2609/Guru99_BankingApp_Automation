@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [GeneralSuite1]">
+  <test name="GeneralTest1(failed)">
+    <classes>
+      <class name="tests.NewCustomerTest">
+        <methods>
+          <include name="verifyNewCustomerSubmitButton"/>
+          <include name="closeBroser"/>
+          <include name="setUpBrowser"/>
+        </methods>
+      </class> <!-- tests.NewCustomerTest -->
+    </classes>
+  </test> <!-- GeneralTest1(failed) -->
+</suite> <!-- Failed suite [GeneralSuite1] -->

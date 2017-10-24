@@ -3,9 +3,8 @@ package tests;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -16,7 +15,7 @@ public class NewCustomerTest extends NewCustomerPage
 {	
 	
 	
-	@Test(description="Verification Of Launching Add New Customer page")
+	@Test(priority=1,enabled=true,description="Verification Of Launching Add New Customer page")
 	public static void verifyNewCustomerPageLaunch()
 	{
 		BaseFile.loginMethod();
@@ -26,16 +25,18 @@ public class NewCustomerTest extends NewCustomerPage
 		Reporter.log("Add New Customer Page is Launched Successfully");
 	}
 	
-	@Test(description="Verification of Add New Customer Submit Button")
+	@Test(priority=2,description="Verification of Add New Customer Submit Button")
 	public static void verifyNewCustomerSubmitButton() throws InterruptedException
 	{
 		NewCustomerPage.launchCreateNewCustomer();
 		submitNewCustInfo();
 		Assert.assertTrue(acceptAlert().equals("please fill all fields"));
 		Reporter.log("As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer");
-		fillNewCustInfo("nameList", "female", "01/08/1990", "address", "cityList",
-				"stateList", "123465", "456789123", "emailList2@test.com" ,"pwdList");
+		fillNewCustInfo("try2List", "female", "01/08/1990", "address", "cityList",
+				"stateList", "123465", "456789123", "emailList2tse@test.com" ,"pwdList");
+		
 		submitNewCustInfo();
+		Thread.sleep(2000);
 		Assert.assertTrue(getNewCustDashBoardMsg().equals("Customer Registered Successfully!!!"));
 		Reporter.log("As Expected,New Customer information is Added Successfully");
 		
@@ -44,7 +45,7 @@ public class NewCustomerTest extends NewCustomerPage
 	
 	
 	
-	@Test(description="Verification Of Submitting Multiple Valid Data",enabled=false,dependsOnMethods = {"verifyNewCustomerPageLaunch"} )
+	@Test(priority=3,description="Verification Of Submitting Multiple Valid Data",enabled=true,dependsOnMethods = {"verifyNewCustomerPageLaunch"} )
 	public static void addMultiValidCustomers() throws IOException, InterruptedException
 	{
 		NewCustomerPage.launchCreateNewCustomer();
@@ -70,6 +71,8 @@ public class NewCustomerTest extends NewCustomerPage
 			
 			launchCreateNewCustomer();
 		}
+		
+		Reporter.log("As Expected,Multiple New Customer information From Excel is Added Successfully");
 		
 	}
 
