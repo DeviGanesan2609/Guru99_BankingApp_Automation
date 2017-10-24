@@ -18,6 +18,7 @@ public class NewCustomerTest extends NewCustomerPage
 	@Test(priority=1,enabled=true,description="Verification Of Launching Add New Customer page")
 	public static void verifyNewCustomerPageLaunch()
 	{
+		System.out.println("Add New Customer Page Test");
 		BaseFile.loginMethod();
 		NewCustomerPage.launchCreateNewCustomer();
 		Assert.assertTrue(getNewCustDashBoardMsg().contains("Add New Customer"));
