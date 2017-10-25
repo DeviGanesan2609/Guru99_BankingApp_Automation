@@ -2,6 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+
 
 public class NewCustomerPage extends BaseFile
 {	
@@ -53,6 +56,34 @@ public class NewCustomerPage extends BaseFile
 	@FindBy(name="res")
 	public static WebElement newCustResetBtn ;
 	
+	@FindBy(id="message")
+	public static WebElement newCustNameErr ;
+	
+	@FindBy(id="message24")
+	public static WebElement newCustDobErr ;
+	
+	@FindBy(id="message3")
+	public static WebElement newCustAddrErr ;
+	
+	@FindBy(id="message4")
+	public static WebElement newCustCityErr ;
+	
+	@FindBy(id="message5")
+	public static WebElement newCustStateErr ;
+	
+	@FindBy(id="message6")
+	public static WebElement newCustPinErr ;
+	
+	@FindBy(id="message7")
+	public static WebElement newCustMobErr ;
+	
+	@FindBy(id="message9")
+	public static WebElement newCustEmailErr ;
+	
+	@FindBy(id="message18")
+	public static WebElement newCustPwdErr ;
+	
+	
 	public static void launchCreateNewCustomer()
 	{
 		newCustomerBtn.click();
@@ -66,8 +97,7 @@ public class NewCustomerPage extends BaseFile
 	public static void fillNewCustInfo(String name,String gender,String dOB,Object address,Object city,
 			Object state,Object pinNum,Object mobNum,Object email,Object pwd) throws InterruptedException
 	{
-	newCustName.sendKeys(name);
-	Thread.sleep(2000);
+	newCustName.sendKeys(name);	
 	if(gender.equalsIgnoreCase("male"))
 	{
 		maleRadioBtn.click();
@@ -76,31 +106,46 @@ public class NewCustomerPage extends BaseFile
 	{
 		femaleRadioBtn.click();
 	}
-	Thread.sleep(2000);
+	
 	newCustDOB.sendKeys(dOB);
-	Thread.sleep(2000);
 	newCustAddr.sendKeys(address.toString());
-	Thread.sleep(2000);
 	newCustCity.sendKeys(city.toString());
-	Thread.sleep(2000);
-	newCustState.sendKeys(state.toString());
-	Thread.sleep(2000);
-	newCustPinNum.sendKeys(pinNum.toString());
-	Thread.sleep(2000);
-	newCustTele.sendKeys(mobNum.toString());
-	Thread.sleep(2000);
-	newCustEmail.sendKeys(email.toString());
-	Thread.sleep(2000);
+	newCustState.sendKeys(state.toString());	
+	newCustPinNum.sendKeys(pinNum.toString());	
+	newCustTele.sendKeys(mobNum.toString());	
+	newCustEmail.sendKeys(email.toString());	
 	newCustPwd.sendKeys(pwd.toString());
-	Thread.sleep(2000);
+
 	}
 	
 	public static void submitNewCustInfo() throws InterruptedException
 	{
 		newCustSubmitBtn.click();
-		Thread.sleep(2000);
 	}
 	
+	public static void verifyErrMsgsNewCustPage() throws InterruptedException
+	{
+		newCustName.click();//newCustDashBoardMsg.click();
+		
+		newCustDOB.click();
+		newCustAddr.click();
+		newCustCity.click();
+		newCustState.click();
+		newCustPinNum.click();
+		newCustTele.click();
+		newCustEmail.click();
+		newCustPwd.click();					
+		newCustDashBoardMsg.click();
+		Assert.assertEquals("Customer name must not be blank", newCustNameErr.getText());
+		Assert.assertEquals("Date Field must not be blank", newCustDobErr.getText());
+		Assert.assertEquals("Address Field must not be blank", newCustAddrErr.getText());
+		Assert.assertEquals("City Field must not be blank", newCustCityErr.getText());
+		Assert.assertEquals("State must not be blank", newCustStateErr.getText());
+		Assert.assertEquals("PIN Code must not be blank", newCustPinErr.getText());
+		Assert.assertEquals("Mobile no must not be blank", newCustMobErr.getText());
+		Assert.assertEquals("Email-ID must not be blank", newCustEmailErr.getText());
+		Assert.assertEquals("Password must not be blank", newCustPwdErr.getText());
+	}
 	
 	
 }

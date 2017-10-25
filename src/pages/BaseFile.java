@@ -2,8 +2,10 @@ package pages;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -122,7 +124,20 @@ public void loginpage()
 }*/
 
 
-
+public static String randomStringGenerator()
+{
+	String characters = "abcdefghijklmnopqrstuvwxyz";
+	Random randomInt = new Random();
+	Random ranString = new SecureRandom();
+	int length = randomInt.nextInt(10)+1;
+	StringBuilder sb = new StringBuilder();
+	for(int i =0;i<length;i++)
+	{
+		sb.append(characters.charAt(ranString.nextInt(characters.length())));
+	}		
+	return sb.toString();
+	
+}
 
 @AfterClass
 public void closeBroser()

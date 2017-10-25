@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.NewCustomerTest">
         <methods>
-          <include name="verifyNewCustomerSubmitButton"/>
+          <include name="verificationOfErrorMessages"/>
           <include name="closeBroser"/>
           <include name="setUpBrowser"/>
         </methods>

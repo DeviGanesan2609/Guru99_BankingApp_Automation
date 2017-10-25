@@ -26,15 +26,15 @@ public class NewCustomerTest extends NewCustomerPage
 		Reporter.log("Add New Customer Page is Launched Successfully");
 	}
 	
-	@Test(priority=2,enabled = true,description="Verification of Add New Customer Submit Button")
+	@Test(priority=2,enabled = true,invocationCount=1,description="Verification of Add New Customer Submit Button")
 	public static void verifyNewCustomerSubmitButton() throws InterruptedException
 	{
 		NewCustomerPage.launchCreateNewCustomer();
 		submitNewCustInfo();
 		Assert.assertTrue(acceptAlert().equals("please fill all fields"));
 		Reporter.log("As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer");
-		fillNewCustInfo("ChangeList", "female", "01/08/1990", "address", "cityList",
-				"stateList", "123465", "456789123", "chanemail2tse@test.com" ,"Changedpwst");
+		fillNewCustInfo(randomStringGenerator(), "female", "01/08/1990", "address", "cityList",
+				"stateList", "123465", "456789123", randomStringGenerator()+"@test.com" ,"Changedpwst");
 		Thread.sleep(2000);
 		submitNewCustInfo();
 		Thread.sleep(2000);
@@ -43,10 +43,17 @@ public class NewCustomerTest extends NewCustomerPage
 		
 		
 	}
+		
+	@Test(priority=3,description="Validate Error Messages Displayed For Each Field Of Adding New Customer",enabled=true)
+	public static void verificationOfErrorMessages() throws InterruptedException
+	{
+		NewCustomerPage.launchCreateNewCustomer();
+		verifyErrMsgsNewCustPage();
+		Reporter.log("The Error Messages for blank customer info in 'Add New Customer' page are Displayed As Expected");
+	}
 	
 	
-	
-	@Test(priority=3,description="Verification Of Submitting Multiple Valid Data",enabled=false,dependsOnMethods = {"verifyNewCustomerPageLaunch"} )
+	@Test(priority=4,description="Verification Of Submitting Multiple Valid Data",enabled=false,dependsOnMethods = {"verifyNewCustomerPageLaunch"} )
 	public static void addMultiValidCustomers() throws IOException, InterruptedException
 	{
 		NewCustomerPage.launchCreateNewCustomer();
@@ -73,8 +80,7 @@ public class NewCustomerTest extends NewCustomerPage
 			launchCreateNewCustomer();
 		}
 		
-		Reporter.log("As Expected,Multiple New Customer information From Excel is Added Successfully");
-		
+		Reporter.log("As Expected,Multiple New Customer information From Excel is Added Successfully");		
 	}
 
 

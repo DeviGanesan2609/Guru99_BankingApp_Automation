@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
   <reporter-output>
     <line>
       <![CDATA[Add New Customer Page is Launched Successfully]]>
@@ -10,24 +10,27 @@
     <line>
       <![CDATA[As Expected,New Customer information is Added Successfully]]>
     </line>
+    <line>
+      <![CDATA[The Error Messages for blank customer info in 'Add New Customer' page are Displayed As Expected]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51406" started-at="2017-10-24T10:19:02Z" finished-at="2017-10-24T10:19:54Z">
+  <suite name="Default suite" duration-ms="35401" started-at="2017-10-25T09:37:34Z" finished-at="2017-10-25T09:38:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="51406" started-at="2017-10-24T10:19:02Z" finished-at="2017-10-24T10:19:54Z">
+    <test name="Default test" duration-ms="35401" started-at="2017-10-25T09:37:34Z" finished-at="2017-10-25T09:38:09Z">
       <class name="tests.NewCustomerTest">
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="setUpBrowser" is-config="true" duration-ms="11123" started-at="2017-10-24T15:49:02Z" finished-at="2017-10-24T15:49:14Z">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="setUpBrowser" is-config="true" duration-ms="15469" started-at="2017-10-25T15:07:34Z" finished-at="2017-10-25T15:07:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="verifyNewCustomerPageLaunch()[pri:1, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerPageLaunch" duration-ms="2870" started-at="2017-10-24T15:49:14Z" description="Verification Of Launching Add New Customer page" finished-at="2017-10-24T15:49:16Z">
+        <test-method status="PASS" signature="verifyNewCustomerPageLaunch()[pri:1, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerPageLaunch" duration-ms="3131" started-at="2017-10-25T15:07:49Z" description="Verification Of Launching Add New Customer page" finished-at="2017-10-25T15:07:52Z">
           <reporter-output>
             <line>
               <![CDATA[Add New Customer Page is Launched Successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyNewCustomerPageLaunch -->
-        <test-method status="PASS" signature="verifyNewCustomerSubmitButton()[pri:2, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerSubmitButton" duration-ms="36173" started-at="2017-10-24T15:49:17Z" description="Verification of Add New Customer Submit Button" finished-at="2017-10-24T15:49:53Z">
+        <test-method status="PASS" signature="verifyNewCustomerSubmitButton()[pri:2, instance:tests.NewCustomerTest@68be2bc2]" name="verifyNewCustomerSubmitButton" duration-ms="12552" started-at="2017-10-25T15:07:52Z" description="Verification of Add New Customer Submit Button" finished-at="2017-10-25T15:08:05Z">
           <reporter-output>
             <line>
               <![CDATA[As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer]]>
@@ -37,7 +40,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyNewCustomerSubmitButton -->
-        <test-method status="PASS" signature="closeBroser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="closeBroser" is-config="true" duration-ms="1206" started-at="2017-10-24T15:49:53Z" finished-at="2017-10-24T15:49:54Z">
+        <test-method status="PASS" signature="verificationOfErrorMessages()[pri:3, instance:tests.NewCustomerTest@68be2bc2]" name="verificationOfErrorMessages" duration-ms="2832" started-at="2017-10-25T15:08:05Z" description="Validate Error Messages Displayed For Each Field Of Adding New Customer" finished-at="2017-10-25T15:08:08Z">
+          <reporter-output>
+            <line>
+              <![CDATA[The Error Messages for blank customer info in 'Add New Customer' page are Displayed As Expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verificationOfErrorMessages -->
+        <test-method status="PASS" signature="closeBroser()[pri:0, instance:tests.NewCustomerTest@68be2bc2]" name="closeBroser" is-config="true" duration-ms="1375" started-at="2017-10-25T15:08:08Z" finished-at="2017-10-25T15:08:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBroser -->

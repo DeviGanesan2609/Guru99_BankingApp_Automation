@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\indganesan\AppData\Local\Temp\testng-eclipse--889242239\testng-customsuite.xml</span>
+                    <span>C:\Users\indganesan\AppData\Local\Temp\testng-eclipse-323532806\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.NewCustomerTest" hash-for-method="verificationOfErrorMessages">verificationOfErrorMessages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.NewCustomerTest" hash-for-method="verifyNewCustomerPageLaunch">verifyNewCustomerPageLaunch</a> <!-- method navigator-link -->
@@ -130,6 +135,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verificationOfErrorMessages">
+                  </a> <!-- verificationOfErrorMessages -->
+                  <span class="method-name">verificationOfErrorMessages</span>
+                  <em>
+(Validate Error Messages Displayed For Each Field Of Adding New Customer)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyNewCustomerPageLaunch">
                   </a> <!-- verifyNewCustomerPageLaunch -->
                   <span class="method-name">verifyNewCustomerPageLaunch</span>
@@ -151,7 +165,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\indganesan\AppData\Local\Temp\testng-eclipse--889242239\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\indganesan\AppData\Local\Temp\testng-eclipse-323532806\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -200,20 +214,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyNewCustomerSubmitButton')
 data.setCell(0, 2, 'tests.NewCustomerTest')
-data.setCell(0, 3, 36173);
+data.setCell(0, 3, 12552);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyNewCustomerPageLaunch')
 data.setCell(1, 2, 'tests.NewCustomerTest')
-data.setCell(1, 3, 2870);
+data.setCell(1, 3, 3131);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verificationOfErrorMessages')
+data.setCell(2, 2, 'tests.NewCustomerTest')
+data.setCell(2, 3, 2832);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -225,16 +243,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyNewCustomerPageLaunch</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Add New Customer Page is Launched Successfully</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
               <span class="reporter-method-name">verifyNewCustomerSubmitButton</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">As expected,Pop up with error message is dispayed When Submitting Blank Info for New Customer</span>
                 <span class="reporter-method-output">As Expected,New Customer information is Added Successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verificationOfErrorMessages</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">The Error Messages for blank customer info in 'Add New Customer' page are Displayed As Expected</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyNewCustomerPageLaunch</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Add New Customer Page is Launched Successfully</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -266,15 +290,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyNewCustomerPageLaunch</span>
-                <span class="method-start">11131 ms</span>
+                <span class="method-start">15486 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyNewCustomerSubmitButton</span>
-                <span class="method-start">14017 ms</span>
+                <span class="method-start">18623 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verificationOfErrorMessages</span>
+                <span class="method-start">31176 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBroser</span>
-                <span class="method-start">50192 ms</span>
+                <span class="method-start">34009 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
